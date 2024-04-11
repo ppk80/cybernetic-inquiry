@@ -11,9 +11,15 @@ div.page {
 
 body {
   margin: 0 auto;
+  transform-origin:top center;
+  background: rgb(0,15,15);
+  background: linear-gradient(0deg, rgba(0,15,15,1) 0%, rgba(15,15,0,1) 33%, rgba(15,0,15,1) 66%, rgba(0,15,15,1) 100%);
+}
+
+div.document { 
+  margin: 0 auto;
   width: 1000px;
   transform-origin:top center;
-  background-color: #04001a;
 }
 
 img {
@@ -21,13 +27,12 @@ margin: 0 auto;
   width: 100%;
 }
 
-
 </style>
 </head>
 <body>
 
 
-
+<div class="document">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2550 3300">
   <image width="2550" height="3300" xlink:href="com/Archaeoacoustic-1-fs8.png"></image> <a xlink:href="https://chat.openai.com/share/ca2c166d-3f3f-4927-bdf1-313b258e27f8">
     <rect x="296" y="2716" fill="#fff" opacity="0" width="458" height="67"></rect>
@@ -86,7 +91,7 @@ margin: 0 auto;
 <div class="page"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="com/Coda-fs8.png"></div>
 <div class="page"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="com/Sound37-fs8.png"></div>
 
-
+</div>
 
 <script>
 function init() {
