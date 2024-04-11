@@ -7,6 +7,7 @@
 
 div.page {
   margin: 0px;
+
 }
 
 body {
@@ -35,7 +36,7 @@ img {
 <body>
 
 
-<div id="element" class="document">
+<div class="document">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2550 3300">
   <image width="2550" height="3300" xlink:href="com/Archaeoacoustic-1-fs8.png"></image> <a xlink:href="https://chat.openai.com/share/ca2c166d-3f3f-4927-bdf1-313b258e27f8">
     <rect x="296" y="2716" fill="#fff" opacity="0" width="458" height="67"></rect>
@@ -105,22 +106,6 @@ imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
 } } }
 window.onload = init;
 </script> 
-
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  // Get viewport width
-  var viewportWidth = window.innerWidth;
-  var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
-
-  // Set element width to viewport width
-  var element = document.getElementById('element');
-  element.classList.add('another-class'); // Adding another class
-  
-  
-  element.style.width = (viewportWidth - scrollbarWidth) + 'px';
-});
-</script>
 
 </body>
 </html>
