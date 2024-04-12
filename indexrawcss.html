@@ -1,4 +1,4 @@
-<html>
+<html doctype="html">
 <head>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <meta charset="UTF-8">
@@ -11,7 +11,9 @@ div.page {
 }
 
 body {
-  margin: 0 auto;
+  margin:0;
+	padding:0;
+	border:0;
   transform-origin:top center;
   background: rgb(0,15,15);
   background: linear-gradient(0deg, rgba(0,15,15,1) 0%, rgba(15,15,0,1) 33%, rgba(15,0,15,1) 66%, rgba(0,15,15,1) 100%);
@@ -28,7 +30,9 @@ body {
 	}
 	
 	div.scroll { 
-	  margin: 0 auto;
+	  margin: 0px;
+		padding:0px;
+		border:0px;
 
 	  transform-origin:top center;
 	  height: auto;
@@ -44,7 +48,7 @@ body {
 	}
 
 	img {
-	  margin: 0 auto;
+	  margin: 0px;
 	  width: 100%;
 	  height: auto;
 	}
@@ -52,26 +56,26 @@ body {
 	div.columnl{
 		padding-right: 5%; 
 		width: 50%;
-		position: relative;
 	}
 	
 	div.columnr{
 		width: 50%;
 		padding-left: 5%;
-		position: relative;
+		
 	}
 	
 	p.title{
-		font-size: 190%;
+		font-size: 100%;
 	}
 	
 	div.block{
-		position: relative;
+		width: 100%;
+		
 	}
 	
 	div.colblock{
 		display: flex;
-		position: relative;
+		
 	}
 </style>
 </head>
@@ -99,7 +103,7 @@ Certainly, a role that encompasses the responsibilities of a research  subject, 
 			</div>
 	</div>
 </div>
-	
+	</div>
 <script>
 function init() {
 var imgDefer = document.getElementsByTagName('img');
@@ -120,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // Set element width to viewport width
   var element = document.getElementById('element');
   element.classList.add('another-class'); // Adding another class
-  var fontSize = viewportWidth * 0.0179;
+  var fontSize = viewportWidth * 0.018;
   
   
   element.style.width = (viewportWidth - scrollbarWidth) + 'px';
