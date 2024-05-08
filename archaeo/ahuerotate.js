@@ -3,7 +3,7 @@
 
         anchors.forEach((anchor, index) => {
             // Define a unique hue shift for each anchor
-            const hueRotation = index * 15; // Each anchor gets a different hue shift
+            const hueRotation = index * 1; // Each anchor gets a different hue shift
 
             // Apply the hue-rotate filter to the background-image
             anchor.style.filter = `hue-rotate(${hueRotation}deg)`;

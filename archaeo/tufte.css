@@ -153,6 +153,13 @@ ul {
     line-height: 2rem;
 }
 
+
+.equation{
+	font-family: "Cambria Math";
+
+}
+
+
 p {
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
@@ -507,3 +514,29 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 }
+
+        table {
+            border-collapse: collapse; /* Ensures no space between cells */
+            width: 100%;
+			border:0;
+        }
+
+        th, td {
+            border: 0px solid #333; /* Cell borders */
+            padding: 10px; /* Padding for each cell */
+            text-align: center; /* Center-align text */
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl; /* Rotate text vertically (bottom to top) */
+            transform: rotate(180deg); /* Adjust orientation to top-to-bottom */
+        }
+
+        .image-cell {
+            padding: 0; /* Remove padding for images */
+        }
+
+        .image-cell img {
+            width: 100%; /* Ensure image fills the cell */
+            height: auto; /* Maintain aspect ratio */
+        }
