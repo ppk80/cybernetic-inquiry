@@ -536,6 +536,11 @@ label.margin-toggle:not(.sidenote-number) {
             padding: 0; /* Remove padding for images */
         }
 
+        .image-cell33 {
+            padding: 0; /* Remove padding for images */
+			width: 33%;
+        }
+		
         .image-cell img {
             width: 100%; /* Ensure image fills the cell */
             height: auto; /* Maintain aspect ratio */
