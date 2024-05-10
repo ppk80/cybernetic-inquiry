@@ -51,7 +51,7 @@
 
 /* Tufte CSS styles */
 html {
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 body {
@@ -149,11 +149,29 @@ p,
 dl,
 ol,
 ul {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2rem;
 }
 
+div.shell {
+	padding: 1rem;
+	background-image: linear-gradient(0deg, #15003c, #340027, #2b0100);
+}
 
+div.shelltext{
+		background-image: linear-gradient(0deg, #ebe3b2, #ffd2f1);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	color: #ffffff;
+	font-size: 1.2rem;
+}
+
+div.shell2 {
+	padding: 1rem;
+	background-image: linear-gradient(0deg, #ffffff, #000000, #2b0100);
+}
 .equation{
 	font-family: "Cambria Math";
 
