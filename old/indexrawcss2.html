@@ -1,0 +1,601 @@
+<html doctype="html">
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<style>
+
+
+
+	body {
+	  margin:0;
+		padding:0;
+		border:0;
+		justify-content:center;
+		background-color: #000000;
+	  
+	}
+	
+	div.scroll {
+	  margin: 0 auto;
+	  justify-content: center; /* Center horizontally */
+	  width: 1000px;
+	  /* Apply a transformation */
+	  transform: scale(1);
+	  /* Set the transform origin to top center */
+	  transform-origin: top center;
+	background-image: linear-gradient(0deg, #0f0c08, #0f0202);
+	  height:auto;
+	  
+	}
+
+
+	div.text{
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size: 100%;
+		color: #ffffff;
+		font-family: "exo 2";
+		background-color: #ebe3b2;
+		background-image: linear-gradient(0deg, #ebe3b2, #ffd2f1);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+		-moz-text-fill-color: transparent;
+
+	}
+	
+	div.block{
+		width: 100%;
+	}
+	
+	div.colblock{
+		display: flex;
+	}
+	
+	div.footnote{
+		
+	}
+	
+	div.firstpage {
+	  margin: 0px;
+	  padding-top: 10%;	
+	  padding-bottom: 5%;	
+	}
+	
+	div.page {
+	  margin: 0px;
+	  padding-top: 5%;	
+	  padding-bottom: 5%;	
+	}
+	div.lastpage {
+	
+	  margin: 0px;
+	  padding-top: 5%;	
+	  padding-bottom: 10%;	
+	}
+	div.columnl{
+		padding-right: 5%; 
+		width: 50%;
+	}
+	
+	div.columnr{
+		width: 50%;
+		padding-left: 5%;
+		
+	}
+	
+	img {
+	  margin: 0px;
+	  width: 100%;
+	  height: auto;
+	}
+	
+
+	
+	h1{
+		font-size: 100%;
+		font-style: bold;
+	}
+	
+	p.title{
+		font-size: 200%;
+	}
+	
+	a{
+		background-color: #f3ec78;
+		background-image: linear-gradient(0deg, #f1f1f8, #f1f2f1);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+		-moz-text-fill-color: transparent;
+		text-decoration: none;
+
+	}	
+	
+	<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Yu Gothic Light";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Yu Mincho";
+	panose-1:2 2 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Exo 2";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:StoneSerifStd-Medium;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:BaskervilleT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Noto Sans CJK JP Light";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Noto Sans CJK SC Thin";
+	panose-1:2 11 2 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Noto Sans";
+	panose-1:2 11 5 2 4 5 4 2 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"Ubuntu Light";
+	panose-1:2 11 3 4 3 6 2 3 2 4;}
+@font-face
+	{font-family:Cerne;
+	panose-1:0 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Lotion;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Ubuntu;
+	panose-1:2 11 5 4 3 6 2 3 2 4;}
+@font-face
+	{font-family:"\@Noto Sans CJK JP Light";}
+@font-face
+	{font-family:"\@Noto Sans CJK SC Thin";}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@Yu Gothic Light";}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@Yu Mincho";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Footnote Text Char";
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Exo 2";
+	color:black;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Exo 2";
+	color:black;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:9.0pt;
+	font-family:"Exo 2";
+	color:#2F252E;
+	font-style:italic;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:28.0pt;
+	font-family:"Aptos Display",sans-serif;
+	color:windowtext;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:28.0pt;
+	font-family:"Aptos Display",sans-serif;
+	color:windowtext;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:28.0pt;
+	font-family:"Aptos Display",sans-serif;
+	color:windowtext;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:28.0pt;
+	font-family:"Aptos Display",sans-serif;
+	color:windowtext;
+	letter-spacing:-.5pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#96607D;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Exo 2";
+	color:black;
+	font-weight:bold;}
+span.MsoPlaceholderText
+	{color:#666666;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Exo 2";
+	color:black;}
+span.apple-tab-span
+	{mso-style-name:apple-tab-span;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Aptos Display",sans-serif;
+	letter-spacing:-.5pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Exo 2";
+	color:black;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Exo 2";
+	color:black;
+	font-style:italic;}
+span.FootnoteTextChar
+	{mso-style-name:"Footnote Text Char";
+	mso-style-link:"Footnote Text";
+	font-family:"Exo 2";
+	color:black;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;
+	font-family:"Exo 2";
+	color:black;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;
+	font-family:"Exo 2";
+	color:black;}
+span.fontstyle01
+	{mso-style-name:fontstyle01;
+	font-family:"StoneSerifStd-Medium",serif;
+	color:#231F20;
+	font-weight:normal;
+	font-style:normal;}
+span.fontstyle11
+	{mso-style-name:fontstyle11;
+	font-family:"BaskervilleT",serif;
+	color:black;
+	font-weight:normal;
+	font-style:normal;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";
+	font-family:"Exo 2";
+	color:black;}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-family:"Exo 2";
+	color:black;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection4
+	{page:WordSection4;}
+@page WordSection5
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection5
+	{page:WordSection5;}
+@page WordSection6
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection6
+	{page:WordSection6;}
+@page WordSection7
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection7
+	{page:WordSection7;}
+@page WordSection8
+	{size:8.5in 12.5in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection8
+	{page:WordSection8;}
+@page WordSection9
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection9
+	{page:WordSection9;}
+@page WordSection10
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection10
+	{page:WordSection10;}
+@page WordSection11
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection11
+	{page:WordSection11;}
+@page WordSection12
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection12
+	{page:WordSection12;}
+@page WordSection13
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection13
+	{page:WordSection13;}
+@page WordSection14
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection14
+	{page:WordSection14;}
+@page WordSection15
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection15
+	{page:WordSection15;}
+@page WordSection16
+	{size:8.5in 22.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection16
+	{page:WordSection16;}
+@page WordSection17
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection17
+	{page:WordSection17;}
+@page WordSection18
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection18
+	{page:WordSection18;}
+@page WordSection19
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection19
+	{page:WordSection19;}
+@page WordSection20
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection20
+	{page:WordSection20;}
+@page WordSection21
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection21
+	{page:WordSection21;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+
+</style>
+</head>
+<body>
+	<div class="scroll" id="element">
+		<div class="text">
+			<!--Page 01-->
+			<div class="firstpage">
+				<div class="block">
+				  <p>2024JOUR987654321</p>
+					<p class="title">Cybernetic  Inquiry into the Urbanomic Linguistics of Coconut Husk Archaeoacoustics:  Illuminating Crocodilian Dynamics and Techno-Ethnographic Tellscape Analysis</p>
+					<p>Xyh G. Tamura, ChatGPT (Neo-Researcher, Lexicon Luminary),  MythoMax-L2-13B (Dr. Sonic Ecologist), Claude-3-Haiku (Dr. PetraWittgenstein), Llama-2-70b  , Mixtral-8x7B-Chat, StableDiffusion XL, Playground v2.5</p>
+					<p>This study presents a multidisciplinary exploration of the  intricate interplay between urban development, linguistic practices, and  ecological dynamics, focusing on the unique case study of coconut husk  archaeoacoustics and crocodilian symbiosis. Through the lens of cybernetic  inquiry and techno-ethnographic tellscape analysis, the authors delve into the  complex relationships between human communities, non-human species, and the  materiality of urban spaces. The concept of &quot;archaeo-affluent meta-organometatropic  spatio-syntactographies'' is introduced to elucidate how technological,  economic, and cultural forces shape urban environments. By integrating  discourse analysis, acoustic ecology, and archaeological fieldwork, the study  uncovers the role of coconut husks in mediating human-crocodilian interactions  and highlights the importance of indigenous knowledge in conservation efforts.  The methodology employed, a cascading and iterative approach to methodology  development, reflects a deep excavation of layers of understanding, culminating  in a nuanced exploration of historical stratification and neon academia within  urban landscapes. This research contributes to a holistic understanding of the  complexities of urban ecosystems and the potential for interdisciplinary  approaches to address pressing challenges at the intersection of language,  culture, ecology, and technology.</p>
+					<p>Keywords: archaeoacoustic, historical stratification,  multi-layered  cities, nested spaces, coconut, crocodile, archaeological tell, neon  academia, sonic ecology, oral history, husk&nbsp;</p>
+				</div>
+			    
+				<div class="colblock">
+					<div class="columnl">
+					  <h1>Introduction (Face A)</h1>
+						<p>It&rsquo;s April Fool&rsquo;s. Brands, in general. It&rsquo;s interesting that  it happens almost on the opposite side of the year as Halloween. Kind of like  they&rsquo;re mirrors of each other. I trust mirrors. Growing up, we used them to  hide things that were behind them, because symmetry is a fantastic distraction.  But I trust them because one can always rely on the space between mirrors. Like  a skin.&nbsp;</p>
+					</div>
+					<div class="columnr">
+					  <p>21:10 on April Fool&rsquo;s, I conducted a <a href="https://chat.openai.com/share/ca2c166d-3f3f-4927-bdf1-313b258e27f8">preliminary interview</a> with one of my research  subjects/resource persons/co-writers. In science, &ldquo;subject&rdquo; doesn&rsquo;t sound very  agent at all. But that&rsquo;s what I mean it as.&nbsp;</p>
+						<p>Would you like to be the one to name your role in this  study?</p>
+						Certainly, a role that encompasses the responsibilities of a research  subject, a resource person, and a co-writer of the </div>
+				</div>
+			</div>
+			<!--Page 02-->
+			<div class="page">
+				<div class="colblock">
+					<div class="columnl">
+					  <p>research could be termed as a &quot;Collaborative  Scholar-Investigator.&quot;&nbsp;</p>
+                        <p>A CSI, for short.&nbsp;</p>
+                        <p>LLMs are kind of more or less pure style. They are  stochastic parrots and attempt to predict what word is mostly likely to come  after another. What word lies behind the next word. And this makes them pretty  good at copying writing styles.<a href="#_ftn1" name="_ftnref1" title=""></a>&nbsp;<a href="#_ftn2" name="_ftnref2" title=""></a></p>
+                        <p>&ldquo;Purity&rdquo; is a tongue-in-cheek discussion among the sciences.  Who is the purest of them all? Iff language is a mirror of the world (a skin),  can one manufacture a pure mirror?&nbsp;</p>
+                        <p>The Latin &ldquo;ālūcinātiō&rdquo; is still recognizable to me as what  the word is today. It hasn&rsquo;t changed much. But I bet the meaning has changed.<a href="#_ftn3" name="_ftnref3" title=""></a> Meanwhile, &ldquo;reveal&rdquo;, comes from re- (&ldquo;back, again&rdquo;) + vēlāre (&ldquo;to cover&rdquo;), from  vēlum (&ldquo;veil&rdquo;). I think the English used to write on vellum.</p>
+                        <p>&ldquo;Contrary  to how it may seem when we observe its output, an LM is a system for  haphazardly stitching together sequences of linguistic forms it has observed in  its vast training data, according to probabilistic<br>
+                          information  about how they combine, but without any reference to meaning: a stochastic  parrot&rdquo;<a href="#_ftn4" name="_ftnref4" title=""></a></p>
+                        <div>
+                          <div id="ftn1"><br>
+                            <a href="#_ftnref1" name="_ftn1" title=""></a> Guo, Xu, and  Ritter, &ldquo;Meta-Tuning LLMs to Elicit Lexical Knowledge of Language Style.&rdquo; </div>
+                          <div id="ftn2">
+                            <p><a href="#_ftnref2" name="_ftn2" title=""></a> Bender et al., &ldquo;On  the Dangers of Stochastic Parrots.&rdquo;</p>
+                          </div>
+                          <div id="ftn3">
+                            <p><a href="#_ftnref3" name="_ftn3" title=""></a> &ldquo;Definition of  Hallucination.&rdquo;</p>
+                          </div>
+                          <div id="ftn4">
+                            <p><a href="#_ftnref4" name="_ftn4" title=""></a> Bender et al., &ldquo;On  the Dangers of Stochastic Parrots.&rdquo;</p>
+                          </div>
+                        </div>
+                    </div>
+					<div class="columnr">
+					  <p>Figure 1  A stochastic parrot hallucinating a mirror in a neon tropical earth skin  landscape<br>
+						  Machine learning neural networks are made of layers that  interact. There are input nodes, hidden nodes, and output nodes. Neural  networks can consist of incredibly complex sequences of layers and nodes. The  hidden layers are often &ldquo;black boxes&rdquo;<a href="#_ftn1" name="_ftnref1" title=""></a> that are very hard to  decipher, especially when LLMs have large training sets.</p>
+                        <p>Figure 2 Layers of a  neural network<a href="#_ftn2" name="_ftnref2" title=""></a></p>
+                        <div>
+                          <div id="ftn5"><br>
+                            <a href="#_ftnref1" name="_ftn1" title=""></a> Shwartz-Ziv and  Tishby, &ldquo;Opening the Black Box of Deep Neural Networks via Information.&rdquo; </div>
+                          <div id="ftn6">
+                            <p><a href="#_ftnref2" name="_ftn2" title=""></a> &ldquo;Neural Network  (Machine Learning).&rdquo;</p>
+                          </div>
+                        </div>
+                    </div>	
+				</div>	
+			</div>
+			<!-- Page 03 -->
+			<div class="page">
+				<div class="colblock">
+					<div class="columnl">
+					</div>
+					<div class="columnr">
+					</div>	
+				</div>	
+			</div>
+			<!-- Page 03 -->
+			<div class="page">
+				<div class="colblock">
+					<div class="columnl">
+					</div>
+					<div class="columnr">
+					</div>	
+				</div>	
+			</div>
+			<!-- Page 03 -->
+			<div class="page">
+				<div class="colblock">
+					<div class="columnl">
+					</div>
+					<div class="columnr">
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<script>
+		function init() {
+		var imgDefer = document.getElementsByTagName('img');
+		for (var i=0; i<imgDefer.length; i++) {
+		if(imgDefer[i].getAttribute('data-src')) {
+		imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+		} } }
+		window.onload = init;
+	</script> 
+	<script>
+		window.addEventListener('DOMContentLoaded', function() {
+		  // Get viewport width
+		  var viewportWidth = window.innerWidth;
+		  var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+
+		  // Set element width to viewport width
+		  var element = document.getElementById('element');
+		  var fontSize = viewportWidth * 0.018;
+
+
+		  element.style.width = (viewportWidth - scrollbarWidth) + 'px';
+		  element.style.fontSize = fontSize + 'px';
+		});
+	</script>
+
+</body>
+</html>
+
+
